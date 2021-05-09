@@ -1,10 +1,11 @@
-#create Dictionary
+# create Dictionary
 phonebook = {
     "Melissa": "584-394-5857",
     "Alice": "703-493-1834",
     "Bob": "857-384-1234",
 }
 
+# Loop will continue until user chooses to quit
 while True:
 
 # Show user the prompts
@@ -25,13 +26,11 @@ while True:
         phonebook_new_number = input("What is the new phone number? ")
         phonebook[phonebook_new_entry] = phonebook_new_number
         print("Entry was added")
-        print(phonebook)
     elif user_input ==3:
         delete_entry = input("What is the name you would like to remove? ")
         if delete_entry in phonebook:
             del phonebook[delete_entry]
             print("%s was removed from the phonebook" % (delete_entry))
-            print(phonebook)
         else:
             print("That name does not exist in the phonebook")
     elif user_input == 4:
